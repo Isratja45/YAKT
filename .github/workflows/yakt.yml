@@ -12,8 +12,7 @@ jobs:
     container:
       image: z4nyx/docker:latest
 
-                    - name: Download a Build Artifact
-                uses: actions/download-artifact@v2.1.0
+                    
             
 
     steps:
@@ -23,6 +22,11 @@ jobs:
         env:
            token: ${{ secrets.TOKEN }}
            chat_id: ${{ secrets.CHAT_ID }}
+
+
+
+- name: Download a Build Artifact
+                uses: actions/download-artifact@v2.1.0
 
            steps:
 - uses: actions/checkout@v2
